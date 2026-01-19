@@ -1,6 +1,10 @@
-﻿Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
-//TestaArrayInt();
+﻿using bytebank_ATENDIMENTO.bytebank.Atendimento;
+
+Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+#region EXEMPLOS ARRAY
+/*//TestaArrayInt();
 //TestaBuscarPalavra();
+TestaArrayDeContas();
 void TestaArrayInt()
 {
     int[] idades = new int[5];
@@ -51,7 +55,7 @@ amostra.SetValue(7.1, 2);
 amostra.SetValue(10, 3);
 amostra.SetValue(6.9, 4);
 
-TestaMediana(amostra);
+//TestaMediana(amostra);
 void TestaMediana(Array array)
 {
     if((array == null ) || (array.Length == 0))
@@ -66,8 +70,73 @@ void TestaMediana(Array array)
     double mediana = (tamanho % 2 != 0) ? numerosOrdenados[meio] : numerosOrdenados[meio] + numerosOrdenados[meio - 1] / 2;
     Console.WriteLine($"Mediana: {mediana}");
 }
-int[] valores = { 10, 58, 36, 47 };
-for (int i = 0; i < valores.Length; i++)
+
+void TestaArrayDeContas()
 {
-    Console.WriteLine($"Índice {i}, valor: {valores[i]}");
-}
+    ListasContaCorrente listaDeContas = new ListasContaCorrente();
+    listaDeContas.AdicionarConta(new ContaCorrente(123, "456789-0"));
+    listaDeContas.AdicionarConta(new ContaCorrente(321, "987654-0"));
+    listaDeContas.AdicionarConta(new ContaCorrente(213, "654321-0"));
+    listaDeContas.AdicionarConta(new ContaCorrente(132, "123456-0"));
+    listaDeContas.AdicionarConta(new ContaCorrente(231, "789123-0"));
+    listaDeContas.AdicionarConta(new ContaCorrente(312, "321987-0"));
+    var conta = new ContaCorrente(111, "000111-0");
+    //listaDeContas.AdicionarConta(conta);
+    //listaDeContas.ExibirLista();
+    //listaDeContas.RemoverConta(conta);
+    //listaDeContas.ExibirLista();
+    for (int i = 0; i < listaDeContas.Tamanho; i++)
+    {
+        ContaCorrente novaConta = listaDeContas[i];
+        Console.WriteLine($"Indice [{i}] - {novaConta.Conta}");
+    }
+
+}*/
+#endregion 
+#region EXEMPLOS LISTA
+//List<ContaCorrente> _listaDeContas = new List<ContaCorrente>()
+//{
+//    new ContaCorrente(123, "456789-0"){Saldo = 100},
+//    new ContaCorrente(321, "987654-0"){Saldo = 200},
+//    new ContaCorrente(213, "654321-0"){Saldo = 300},
+//};
+//List<ContaCorrente> _listaDeContas2 = new List<ContaCorrente>()
+//{
+//    new ContaCorrente(123, "456789-0"){Saldo = 100},
+//    new ContaCorrente(321, "987654-0"){Saldo = 200},
+//    new ContaCorrente(213, "654321-0"){Saldo = 300},
+//};
+//List<ContaCorrente> _listaDeContas3 = new List<ContaCorrente>()
+//{
+//    new ContaCorrente(123, "456789-0"){Saldo = 100},
+//    new ContaCorrente(321, "987654-0"){Saldo = 200},
+//    new ContaCorrente(213, "654321-0"){Saldo = 300},
+//};
+//_listaDeContas2.AddRange(_listaDeContas3);
+//_listaDeContas2.Reverse();
+//for (int i = 0; i < _listaDeContas2.Count; i++)
+//{
+//    ContaCorrente conta = _listaDeContas2[i];
+//    Console.WriteLine($"Índice [{i}] - Conta {conta.Conta}, Agência: {conta.Numero_agencia}, Saldo: {conta.Saldo}");
+//}
+
+//Console.WriteLine("\n");
+
+//var range = _listaDeContas3.GetRange(0, 1);
+//for(int i = 0; i < range.Count; i++)
+//{
+//    ContaCorrente conta = range[i];
+//    Console.WriteLine($"Índice [{i}] - Conta {conta.Conta}, Agência: {conta.Numero_agencia}, Saldo: {conta.Saldo}");
+//}
+
+//Console.WriteLine("\n");
+
+//_listaDeContas3.Clear();
+//for (int i = 0; i < range.Count; i++)
+//{
+//    ContaCorrente conta = range[i];
+//    Console.WriteLine($"Índice [{i}] - Conta {conta.Conta}, Agência: {conta.Numero_agencia}, Saldo: {conta.Saldo}");
+//}
+#endregion
+
+new ByteBankAtendimento().AtendimentoCliente();
